@@ -12,11 +12,13 @@
 
         .container {
             max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 10% auto;
+            padding: 50px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+            
         }
 
         h1 {
@@ -24,7 +26,7 @@
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         label {
@@ -62,8 +64,16 @@
         <h1>Sign Up</h1>
         <form action="#" method="post">
             <div class="form-group">
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="midname">Middle Name:</label>
+                <input type="text" id="midname" name="midname" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -71,7 +81,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[^ ]{8,}" required>
                 <small>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
             </div>
             <button type="submit">Sign Up</button>
